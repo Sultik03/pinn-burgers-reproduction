@@ -93,6 +93,24 @@ result — accurate shock capture from only 100 data points — is fully reprodu
 
 ---
 
+## Experiment 1: Collocation Point Sweep
+
+I tested how the number of collocation points affects the accuracy of the PINN while keeping the supervised data fixed at `N_u = 100`.
+
+| N_f | Relative L2 error | Training time |
+|---:|---:|---:|
+| 0 | 9.38e-1 | 3.23 s |
+| 1000 | 8.73e-1 | 51.14 s |
+| 2500 | 8.75e-3 | 96.24 s |
+| 5000 | 6.91e-3 | 161.42 s |
+| 10000 | 4.95e-3 | 482.99 s |
+
+The results show that the physics residual is essential. With no collocation points, the model only fits the sparse initial and boundary data and fails to learn the full PDE solution. Accuracy improves dramatically once enough collocation points are used, especially from `N_f = 2500` onward.
+
+![Collocation sweep log plot](results/experiment_1_collocation/figures/Nf_vs_relative_l2_log.png)
+
+---
+
 ## Citation
 
 ```bibtex
