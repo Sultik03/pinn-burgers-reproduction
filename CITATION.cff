@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this reproduction project, please cite it using the metadata below."
+title: "Physics-Informed Neural Network for Burgers' Equation: Reproduction and Sensitivity Analysis"
+type: software
+
+authors:
+  - family-names: "Aubakirov"
+    given-names: "Sultan"
+
+repository-code: "https://github.com/Sultik03/pinn-burgers-reproduction"
+url: "https://github.com/Sultik03/pinn-burgers-reproduction"
+
+abstract: >
+  A PyTorch reproduction of the continuous-time physics-informed neural
+  network for the one-dimensional viscous Burgers equation, including
+  collocation-point, supervised-data, and neural-network architecture
+  sensitivity experiments.
+
+keywords:
+  - physics-informed neural networks
+  - PINN
+  - Burgers equation
+  - PyTorch
+  - partial differential equations
+  - scientific machine learning
+  - reproducibility
